@@ -39,6 +39,7 @@ public class NoteDAOImplTest {
 
 	@After
 	public void tearDown() {
+		System.out.println("sda");
 		Query query = sessionFactory.getCurrentSession().createQuery("DELETE from Note");
 		query.executeUpdate();
 	}
@@ -48,7 +49,9 @@ public class NoteDAOImplTest {
 	public void testSaveNoteSuccess() {
 
 		noteDAO.saveNote(note);
+		System.out.println("fvg"+noteDAO.saveNote(note));
 		List<Note> notes = noteDAO.getAllNotes();
+		System.out.println("TITLE:"+notes.get(0).getNoteTitle());
 		assertEquals("Testing-1", notes.get(0).getNoteTitle());
 		noteDAO.deleteNote(note.getNoteId());
 
@@ -70,6 +73,7 @@ public class NoteDAOImplTest {
 	public void testDeleteNoteSuccess() {
 
 		noteDAO.saveNote(note);
+		System.out.println("ewfd");
 		Note noteData = noteDAO.getNoteById(note.getNoteId());
 		boolean status = noteDAO.deleteNote(noteData.getNoteId());
 		assertEquals(true, status);

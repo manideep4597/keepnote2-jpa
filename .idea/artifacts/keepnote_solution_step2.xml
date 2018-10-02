@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact name="keepnote-solution-step2">
+    <output-path>$PROJECT_DIR$/out/artifacts/keepnote_solution_step2</output-path>
+    <root id="root">
+      <element id="archive" name="keepnote-solution-step2.war" />
+    </root>
+  </artifact>
+</component>

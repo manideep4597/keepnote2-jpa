@@ -9,7 +9,6 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-
 		<!-- dependency for JUNIT 4 to be added -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -17,54 +16,111 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-
 		<!-- Dependency for Spring Web MVC to be added -->
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>5.0.2.RELEASE</version>
 		</dependency>
-
 		<!-- Dependency for jaxb-api to be added(if using JDK9) -->
-
+		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
+		</dependency>
 		<!-- Dependency for jaxb-impl to be added(if using JDK9) -->
-
+		<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.2.11</version>
+		</dependency>
 		<!-- Dependency for commons-dbcp to be added -->
-
+		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
 		<!-- Dependency for jstl to be added -->
-
-
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>4.0.0</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<!-- Dependency for spring orm to be added -->
-
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>5.0.8.RELEASE</version>
+		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.2.16.Final</version>
 		</dependency>
-
 		<!-- Dependency for mysql-connector to be added -->
-
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>6.0.6</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>5.0.4.RELEASE</version>
 		</dependency>
-
 		<!-- Dependency for mockito-all to be added -->
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+		<!--<dependency>-->
+		<!--<groupId>org.mockito</groupId>-->
+		<!--<artifactId>mockito-all</artifactId>-->
+		<!--<version>1.10.19</version>-->
+		<!--<scope>test</scope>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+		<!--<groupId>org.mockito</groupId>-->
+		<!--<artifactId>mockito-all</artifactId>-->
+		<!--<version>1.8.4</version>-->
+		<!--</dependency>-->
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
 		<dependency>
 			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>1.8.4</version>
+			<artifactId>mockito-core</artifactId>
+			<version>2.21.0</version>
+			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-tools</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.12.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<!--<dependency>-->
+		<!--<groupId>xml-apis</groupId>-->
+		<!--<artifactId>xml-apis</artifactId>-->
+		<!--<version>1.3.04</version>-->
+		<!--</dependency>-->
 	</dependencies>
 	<build>
 		<pluginManagement>
