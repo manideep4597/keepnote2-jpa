@@ -41,6 +41,7 @@ public class Note {
 	@Column(name = "DT",nullable = false)
 	private LocalDateTime dateTime;
 	public Note() {
+		this.dateTime=LocalDateTime.now();
 
 	}
 
@@ -93,9 +94,22 @@ public class Note {
 		this.dateTime=now;
 	}
 	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (!(obj instanceof Note))
+			return false;
+		Note other = (Note) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + noteTitle + ", joiningDate="
-				+ noteContent + ", salary=" + noteStatus + ", ssn=" + id + "]";
+				+ noteContent + ", salary=" + noteStatus + "]";
 	}
 
 }

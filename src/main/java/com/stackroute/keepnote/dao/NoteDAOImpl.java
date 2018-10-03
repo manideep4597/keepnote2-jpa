@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -40,7 +41,6 @@ public class NoteDAOImpl implements NoteDAO {
 
 	public NoteDAOImpl(SessionFactory sessionFactory) {
 		this.sessionFactory=sessionFactory;
-		session=sessionFactory.getCurrentSession();
 	}
 
 	/*
@@ -48,7 +48,7 @@ public class NoteDAOImpl implements NoteDAO {
 	 */
 
 	public boolean saveNote(Note note) {
-		//session=sessionFactory.getCurrentSession();
+		session=sessionFactory.getCurrentSession();
 		session.persist(note);
 		//session.getTransaction().commit();
 		return true;
@@ -74,7 +74,7 @@ public class NoteDAOImpl implements NoteDAO {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Note> getAllNotes() {
-		//session=sessionFactory.getCurrentSession();
+		session=sessionFactory.getCurrentSession();
 		System.out.println("DSF");
 		//CriteriaBuilder builder = session.getCriteriaBuilder();
 

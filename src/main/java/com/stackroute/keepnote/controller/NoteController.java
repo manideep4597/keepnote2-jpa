@@ -16,7 +16,6 @@ import java.util.List;
  * any POJO class as a controller so that Spring can recognize this class as a Controller
  */
 @Controller
-@RequestMapping("/")
 public class NoteController {
 	/*
 	 * From the problem statement, we can understand that the application requires
@@ -40,7 +39,10 @@ public class NoteController {
 	 * Create a Note object.
 	 * 
 	 */
-
+	@ModelAttribute("note")
+	public Note setUpUserForm() {
+		return new Note();
+	}
 
 	/*
 	 * Define a handler method to read the existing notes from the database and add
@@ -52,6 +54,7 @@ public class NoteController {
 		List<Note> noteList=dao.getAllNotes();
 		modelMap.addAttribute("notes",noteList);
 		return "index";
+
 	}
 
 	/*
@@ -64,8 +67,9 @@ public class NoteController {
 	 * back to the view using ModelMap This handler method should map to the URL
 	 * "/add".
 	 */
-	@PostMapping(value = "/add")
-	public String addNewNote(@Valid Note note, BindingResult bindingResult, ModelMap modelMap){
+
+	@RequestMapping(value = "/add" ,method ={ RequestMethod.POST , RequestMethod.GET})
+	public String addNewNote(@ModelAttribute("note") Note note, BindingResult bindingResult, ModelMap modelMap){
 		if(bindingResult.hasErrors()){
 			modelMap.addAttribute("result","Errors in validating");
 			return "index";
@@ -78,6 +82,8 @@ public class NoteController {
 				return "index";
 			}
 		}
+		System.out.println("sasdf"+note.getNoteTitle()+note.getNoteContent());
+		modelMap.addAttribute("note", note);
 		if(dao.saveNote(note))
 		{
 			noteList.add(note);
@@ -106,7 +112,7 @@ public class NoteController {
 	 * Define a handler method which will update the existing note. This handler
 	 * method should map to the URL "/update".
 	 */
-	@PostMapping(value = "/update")
+	@RequestMapping(value = "/update",method = { RequestMethod.GET, RequestMethod.POST })
 	public String updateNote(@Valid Note note, BindingResult bindingResult, ModelMap modelMap){
 		if(bindingResult.hasErrors()){
 			modelMap.addAttribute("result","Errors in validating");
@@ -114,12 +120,6 @@ public class NoteController {
 		}
 
 		List<Note> noteList=dao.getAllNotes();
-		for(Note note1:noteList){
-			if(note1.getNoteId()==note.getNoteId()) {
-				modelMap.addAttribute("result", "ID Already exists. Try another one!");
-				return "index";
-			}
-		}
 		dao.UpdateNote(note);
 		modelMap.addAttribute("notes",noteList);
 		return "redirect:/";
