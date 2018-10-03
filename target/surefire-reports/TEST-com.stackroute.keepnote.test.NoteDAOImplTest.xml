@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.stackroute.keepnote.test.NoteDAOImplTest" time="0.763" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="com.stackroute.keepnote.test.NoteDAOImplTest" time="0.775" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2018.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -62,10 +62,10 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testDeleteNoteSuccess" time="0.45"/>
-  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testGetNoteById" time="0.054"/>
-  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testGetAllNotes" time="0.097"/>
-  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testUpdateNote" time="0.049"/>
-  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testSaveNoteSuccess" time="0.058"/>
-  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testSaveNoteFailure" time="0.055"/>
+  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testDeleteNoteSuccess" time="0.456"/>
+  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testGetNoteById" time="0.045"/>
+  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testGetAllNotes" time="0.104"/>
+  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testUpdateNote" time="0.056"/>
+  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testSaveNoteSuccess" time="0.057"/>
+  <testcase classname="com.stackroute.keepnote.test.NoteDAOImplTest" name="testSaveNoteFailure" time="0.057"/>
 </testsuite>

@@ -31,7 +31,7 @@ public class Note {
 	@Id
 	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID",nullable = false)
-	private int id;
+	private int noteId;
 	@Column(name = "NOTETITLE",nullable = false)
 	private String noteTitle;
 	@Column(name = "NOTECONTENT",nullable = false)
@@ -46,17 +46,17 @@ public class Note {
 	}
 
 	public Note(int i, String string, String string2, String string3, LocalDateTime localDate) {
-		this.id=i;
+		this.noteId=i;
 		this.noteTitle=string;
 		this.noteContent=string2;
 		this.noteStatus=string3;
 		this.dateTime=localDate;
-		System.out.println("in const"+id+noteTitle+noteContent+noteStatus+dateTime);
+		System.out.println("in const"+noteId+noteTitle+noteContent+noteStatus+dateTime);
 	}
 
 	public int getNoteId() {
 
-		return id;
+		return noteId;
 	}
 
 	public String getNoteTitle() {
@@ -75,7 +75,7 @@ public class Note {
 	}
 
 	public void setNoteId(int parseInt) {
-		this.id=parseInt;
+		this.noteId=parseInt;
 	}
 
 	public void setNoteTitle(String parameter) {
@@ -102,13 +102,13 @@ public class Note {
 		if (!(obj instanceof Note))
 			return false;
 		Note other = (Note) obj;
-		if (id != other.id)
+		if (noteId != other.noteId)
 			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + noteTitle + ", joiningDate="
+		return "Employee [id=" + noteId + ", name=" + noteTitle + ", joiningDate="
 				+ noteContent + ", salary=" + noteStatus + "]";
 	}
 

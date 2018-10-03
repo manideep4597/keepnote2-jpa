@@ -49,10 +49,6 @@
                                      <td><form:button formaction="update">Update</form:button></td>
                                           </tr>
           </table>
-          <a href="<c:url value='/' />" >Display</a>
-          <a href="<c:url value='/add' />" >Add</a>
-          <a href="<c:url value='/delete' />" >Delete</a>
-          <a href="<c:url value='/update' />" >Update</a>
 </form:form>
 
 
