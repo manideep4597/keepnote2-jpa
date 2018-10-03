@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Com.Stackroute</groupId>
 	<artifactId>KeepNote-Step2-Boilerplate</artifactId>
@@ -68,6 +68,7 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.2.16.Final</version>
 		</dependency>
+
 		<!-- Dependency for mysql-connector to be added -->
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
@@ -123,36 +124,35 @@
 		<!--</dependency>-->
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 		<!--<dependency>-->
-			<!--<groupId>log4j</groupId>-->
-			<!--<artifactId>log4j</artifactId>-->
-			<!--<version>1.2.17</version>-->
+		<!--<groupId>log4j</groupId>-->
+		<!--<artifactId>log4j</artifactId>-->
+		<!--<version>1.2.17</version>-->
 		<!--</dependency>-->
-
 
 		<!--&lt;!&ndash; Spring &ndash;&gt;-->
 		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-context &ndash;&gt;-->
 		<!--<dependency>-->
-			<!--<groupId>org.springframework</groupId>-->
-			<!--<artifactId>spring-context</artifactId>-->
-			<!--<version>5.0.8.RELEASE</version>-->
+		<!--<groupId>org.springframework</groupId>-->
+		<!--<artifactId>spring-context</artifactId>-->
+		<!--<version>5.0.8.RELEASE</version>-->
 		<!--</dependency>-->
 
 		<!--&lt;!&ndash; JPA Vendor &ndash;&gt;-->
 		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager &ndash;&gt;-->
-		<!--<dependency>-->
-			<!--<groupId>org.hibernate</groupId>-->
-			<!--<artifactId>hibernate-entitymanager</artifactId>-->
-			<!--<version>5.3.6.Final</version>-->
-		<!--</dependency>-->
+		<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>5.2.16.Final</version>
+		</dependency>
 
 
 		<!--&lt;!&ndash; IN MEMORY Database and JDBC Driver &ndash;&gt;-->
 		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.hsqldb/hsqldb &ndash;&gt;-->
 		<!--<dependency>-->
-			<!--<groupId>org.hsqldb</groupId>-->
-			<!--<artifactId>hsqldb</artifactId>-->
-			<!--<version>2.4.0</version>-->
-			<!--<scope>test</scope>-->
+		<!--<groupId>org.hsqldb</groupId>-->
+		<!--<artifactId>hsqldb</artifactId>-->
+		<!--<version>2.4.0</version>-->
+		<!--<scope>test</scope>-->
 		<!--</dependency>-->
 
 	</dependencies>
