@@ -44,7 +44,7 @@
 			<version>1.4</version>
 		</dependency>
 		<!-- Dependency for jstl to be added -->
-		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
